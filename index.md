@@ -11,7 +11,7 @@ A widget to make outgoing call
 ## USAGE
 
 #### 1. Embed widget to your application
-```javascript
+```html
   <script>
    (function (w, d, s, o, f, js, fjs) {
         w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
