@@ -23,7 +23,7 @@ A widget to make outgoing call
 
 #### 2. Init widget
 
-```js
+```html
     <script>
         socioVoice('init', { minimized: true, disableDarkMode: true ,userCredential:'credential'});
     </script>
