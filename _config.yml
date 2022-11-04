@@ -1,6 +1,6 @@
 title: Sociomile Voice Widget
 logo: https://app.sociomile.net/img/logo.svg
 description: A widget to make outgoing call
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
