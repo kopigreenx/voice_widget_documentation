@@ -2,122 +2,88 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
+# Sociomile Voice widget
 
-There should be whitespace between paragraphs.
+A widget to make outgoing call
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+## USAGE
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+#### 1. Embed widget to your application
+```js
+  <script>
+   (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+    }(window, document, 'script', 'socioVoice', './widget.js'));
+  </script>
+```
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
+#### 2. Init widget
 
 ```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+    <script>
+        socioVoice('init', { minimized: true, disableDarkMode: true ,userCredential:'credential'});
+    </script>
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `minimized` | `boolean` | **Required**. default false (widget will expand)|
+| `disableDarkMode` | `boolean` | **Required**. default false (dark mode)|
+| `userCredential` | `string` | **Required**. creadential widget without credential widget not working|
+
+#### 3. Make a call
+
+```js
+  socioVoice('event', {action:'dial',number:'082225636817',internal_id:'a12aslalsoewori'})
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `action` | `string` | **Required**. dial|
+| `number` | `boolean` | **Required**. Phone number to dial|
+| `internal_id` | `string` | **Required**. internal ID for sent back via webhook|
+| `param` | `object` | **optional**. extra parameter for sent back via webhook|
+
+
+#### 4. Extend Feature
+
+##### Maximized widget
+```js
+  socioVoice('event', {action:'open'})
+```
+
+##### Minimized widget
+```js
+  socioVoice('event', {action:'close'})
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `action` | `string` | **Required**. open / close|
+
+
+
+
+## Examples
+
+### Direct inject to href onclick to make a call
+```html
+<a href="javascript:;" onclick="socioVoice('event', {action:'dial',number:'02150112000',internal_id:'internal_id'})">inbound Krakatau</a><br>
+```
+### Make a custom funtion to make a call
+```html
+<a href="javascript:;" onclick="dial()">to close it</a><br>
+```
+
+
+```js
+function dial(){
+    socioVoice('event', socioVoice('event', {action:'dial',number:'02150112000',internal_id:'internal_id'}))
 }
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
