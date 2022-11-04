@@ -78,11 +78,36 @@ A widget to make outgoing call
 ```html
 <a href="javascript:;" onclick="dial()">to close it</a><br>
 ```
-
-
 ```js
 function dial(){
     socioVoice('event', socioVoice('event', {action:'dial',number:'08123123213',internal_id:'internal_id'}))
+}
+```
+
+
+## Webhook Response
+```json
+{
+  "data": {
+    "phone": "12312312",
+    "calldate_init": "2022-11-04 13:35:51",
+    "calldate_join": null,
+    "calldate_end": "2022-11-04 13:35:53",
+    "duration": "2",
+    "duration_time": "00:00:02",
+    "duration_wait": "2",
+    "duration_wait_time": "00:00:02",
+    "talktime": "0",
+    "talktime_time": "00:00:00",
+    "recordingurl": "https://link.recording",
+    "disposition": "NO ANSWER",
+    "uniqueid": "1667543751.398",
+    "internal_id": "a12aslalsoewori",
+    "extra_params": {
+      "id": "asdasd",
+      "req": "ttytty"
+    }
+  }
 }
 ```
 
