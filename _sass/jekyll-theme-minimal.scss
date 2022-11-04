@@ -56,8 +56,10 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  max-width:1000px;
   margin:0 auto;
+  width:auto;
+  
 }
 
 blockquote {
@@ -119,7 +121,8 @@ kbd {
 }
 
 header {
-  width:270px;
+  max-width:270px;
+  width:auto;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
