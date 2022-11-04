@@ -1,6 +1,6 @@
-title: Minimal theme
+title: Sociomile Voice Widget
 logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
+description: A widget to make outgoing call
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
