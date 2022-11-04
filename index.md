@@ -38,7 +38,7 @@ A widget to make outgoing call
 #### 3. Make a call
 
 ```js
-  socioVoice('event', {action:'dial',number:'082225636817',internal_id:'a12aslalsoewori'})
+  socioVoice('event', {action:'dial',number:'08123123123',internal_id:'a12aslalsoewori'})
 ```
 
 | Parameter | Type     | Description                |
@@ -72,7 +72,7 @@ A widget to make outgoing call
 
 ### Direct inject to href onclick to make a call
 ```html
-<a href="javascript:;" onclick="socioVoice('event', {action:'dial',number:'02150112000',internal_id:'internal_id'})">inbound Krakatau</a><br>
+<a href="javascript:;" onclick="socioVoice('event', {action:'dial',number:'08123123123',internal_id:'internal_id'})">Call</a><br>
 ```
 ### Make a custom funtion to make a call
 ```html
@@ -82,7 +82,7 @@ A widget to make outgoing call
 
 ```js
 function dial(){
-    socioVoice('event', socioVoice('event', {action:'dial',number:'02150112000',internal_id:'internal_id'}))
+    socioVoice('event', socioVoice('event', {action:'dial',number:'08123123213',internal_id:'internal_id'}))
 }
 ```
 
