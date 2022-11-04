@@ -56,7 +56,6 @@ a:hover small {
 }
 
 .wrapper {
-  max-width:1000px;
   margin:0 auto;
   width:auto;
   
@@ -189,7 +188,8 @@ strong {
 }
 
 section {
-  width:500px;
+  max-width:1000px;
+  width:auto;
   float:right;
   padding-bottom:50px;
 }
