@@ -38,7 +38,7 @@ A widget to make outgoing call
 #### 3. Make a call
 
 ```js
-  socioVoice('event', {action:'dial',number:'08123123123',internal_id:'a12aslalsoewori'})
+  socioVoice('event', {action:'dial',number:'08123123123',internal_id:'a12aslalsoewori',params:{}})
 ```
 
 | Parameter | Type     | Description                |
@@ -46,7 +46,7 @@ A widget to make outgoing call
 | `action` | `string` | **Required**. dial|
 | `number` | `boolean` | **Required**. Phone number to dial|
 | `internal_id` | `string` | **Required**. internal ID for sent back via webhook|
-| `param` | `object` | **optional**. extra parameter for sent back via webhook|
+| `params` | `object` | **optional**. extra parameter for sent back via webhook|
 
 
 #### 4. Extend Feature
