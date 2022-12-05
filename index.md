@@ -110,6 +110,7 @@ function dial(){
   }
 }
 ```
+
 | Parameter | Description                |
 | :-------- | :------------------------- |
 |`phone` | Phone Number|
