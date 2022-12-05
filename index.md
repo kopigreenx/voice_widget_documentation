@@ -110,5 +110,24 @@ function dial(){
   }
 }
 ```
+| Parameter | Description                |
+| :-------- | :------------------------- |
+|`phone` | Phone Number|
+|`calldate_init` | Datetime call initiated|
+|`calldate_join` | Datetime call answered by customer |
+|`calldate_end` | Datetime call ended|
+|`duration` | Duration call in second|
+|`duration_time` | Duration call in time format|
+|`duration_wait` | Duration wait in second|
+|`duration_wait_time` | Duration wait in time format|
+|`talktime` | Talktime call in second|
+|`talktime_time` | Duration call in time format|
+|`recordingurl` | URL Recording|
+|`disposition` | Status Call Answered / Not Answered|
+|`uniqueid` | recording trace id|
+|`hold_sec` | call on hold in seconds|
+|`internal_id` | internal ticket id / uniqueid value|
+|`extra_params` | extra parameter |
+
 
 
