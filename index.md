@@ -21,16 +21,23 @@ A widget to make outgoing call
   </script>
 ```
 
-#### 2. Init widget
-
+#### 2. Init widget 
+##### Draggable
 ```html
     <script>
         socioVoice('init', { minimized: true, disableDarkMode: true ,userCredential:'credential'});
     </script>
 ```
+##### Embed Into Element
+```html
+    <script>
+        socioVoice('init', { element:document.querySelector('.YourUniqueElementName'),minimized: true, disableDarkMode: true ,userCredential:'credential'});
+    </script>
+```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `element` | `boolean` | **Optional**. embed into custom element will disabled draggable feature|
 | `minimized` | `boolean` | **Required**. default false (widget will expand)|
 | `disableDarkMode` | `boolean` | **Required**. default false (dark mode)|
 | `userCredential` | `string` | **Required**. creadential widget without credential widget not working|
