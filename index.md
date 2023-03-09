@@ -109,6 +109,7 @@ function dial(){
     "recordingurl": "https://link.recording",
     "disposition": "NO ANSWER",
     "uniqueid": "1667543751.398",
+    "hold_sec": 0,
     "internal_id": "a12aslalsoewori",
     "extra_params": {
       "id": "asdasd",
