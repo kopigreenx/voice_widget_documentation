@@ -139,32 +139,32 @@ function dial(){
 |`extra_params` | extra parameter |
 
 ## API Resent dan get recording
-<details>
-  <summary><code>POST</code> <code><b>https://app-voice.ivosights.com/api/widget/webhook/log</b></code> </summary>
 
+```js
+  [POST] https://app-voice.ivosights.com/api/widget/webhook/log
+```
 ##### body
 
-> | name   |  type      | data type      | description                                          |
-> |--------|------------|----------------|------------------------------------------------------|
-> | `internal_id` |  required  | string         | The specific internal ID                  |
-> | `resent` |  optional  | integer         | 1: resent error recording data, 0: show data                  |
+| name   |  type      | data type      | description                                          |
+|--------|------------|----------------|------------------------------------------------------|
+| `internal_id` |  required  | string         | The specific internal ID                  |
+| `resent` |  optional  | integer         | 1: resent error recording data, 0: show data                  |
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `application/json`                |                                                                     |
-  
+| http code     | content-type                      | response                                                            |
+|---------------|-----------------------------------|---------------------------------------------------------------------|
+| `200`         | `application/json`                |                                                                     |
   
   ```json
   [
     {
         "data": {
-            "phone": "082225636817",
+            "phone": "08222xxxx",
             "duration": "2",
             "hold_sec": 0,
             "talktime": "2",
-            "uniqueid": "1678160694.1413",
+            "uniqueid": "1678160694.xxx",
             "disposition": "NO ANSWER",
             "internal_id": "a12aslalsoewori",
             "calldate_end": "2023-03-07 10:44:56",
@@ -182,12 +182,11 @@ function dial(){
         },
         "is_sent": 0,
         "is_error": 1,
-        "messages": "Server error: `POST https://staging-crm.majoo.com/softphone/hook-callback` resulted in a `500 Internal Server Error` response:\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Database Error</title>\n<style type=\"text/css\">\n\n:: (truncated...)\n",
+        "messages": "",
         "sent_at": "2023-03-10 17:53:32"
     }
   ]
   ```
-</details>
 
 
 
