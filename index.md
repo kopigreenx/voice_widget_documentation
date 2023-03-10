@@ -143,6 +143,12 @@ function dial(){
 ```js
   [POST] https://app-voice.ivosights.com/api/widget/webhook/log
 ```
+
+##### header
+| name   |  value      |
+|--------|-------------|
+| `Authorization` |`Bearer {token}`|
+| `Content-type` |`application/json`|
 ##### body
 
 | name   |  type      | data type      | description                                          |
