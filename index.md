@@ -138,5 +138,55 @@ function dial(){
 |`internal_id` | internal ticket id / uniqueid value|
 |`extra_params` | extra parameter |
 
+## API Resent dan get recording
+<details>
+  <summary><code>POST</code> <code><b>https://app-voice.ivosights.com/api/widget/webhook/log</b></code> </summary>
+
+##### body
+
+> | name   |  type      | data type      | description                                          |
+> |--------|------------|----------------|------------------------------------------------------|
+> | `internal_id` |  required  | string         | The specific internal ID                  |
+> | `resent` |  optional  | integer         | 1: resent error recording data, 0: show data                  |
+
+##### Responses
+
+> | http code     | content-type                      | response                                                            |
+> |---------------|-----------------------------------|---------------------------------------------------------------------|
+> | `200`         | `application/json`                |                                                                     |
+  
+  
+  ```json
+  [
+    {
+        "data": {
+            "phone": "082225636817",
+            "duration": "2",
+            "hold_sec": 0,
+            "talktime": "2",
+            "uniqueid": "1678160694.1413",
+            "disposition": "NO ANSWER",
+            "internal_id": "a12aslalsoewori",
+            "calldate_end": "2023-03-07 10:44:56",
+            "extra_params": {
+                "id": "asdasd",
+                "req": "ttytty"
+            },
+            "recordingurl": "",
+            "calldate_init": "2023-03-07 10:44:54",
+            "calldate_join": "2023-03-07 10:44:54",
+            "duration_time": "00:00:02",
+            "duration_wait": "0",
+            "talktime_time": "00:00:02",
+            "duration_wait_time": "00:00:00"
+        },
+        "is_sent": 0,
+        "is_error": 1,
+        "messages": "Server error: `POST https://staging-crm.majoo.com/softphone/hook-callback` resulted in a `500 Internal Server Error` response:\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Database Error</title>\n<style type=\"text/css\">\n\n:: (truncated...)\n",
+        "sent_at": "2023-03-10 17:53:32"
+    }
+  ]
+  ```
+
 
 
